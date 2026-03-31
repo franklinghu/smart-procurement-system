@@ -24,6 +24,12 @@ const protectedRoutes: RouteRecordRaw[] = [
     meta: { title: '首页' }
   },
   {
+    path: '/suppliers',
+    name: 'Suppliers',
+    component: () => import('@/views/suppliers/SupplierList.vue'),
+    meta: { title: '供应商管理' }
+  },
+  {
     path: '/purchase',
     name: 'Purchase',
     component: () => import('@/views/purchase/PurchaseList.vue'),
