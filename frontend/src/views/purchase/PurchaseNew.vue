@@ -41,7 +41,6 @@
             type="date"
             placeholder="选择期望交付日期"
             style="width: 200px"
-            :disabled-date="disabledDate"
           />
         </el-form-item>
         
@@ -157,10 +156,6 @@ const totalQuantity = computed(() => {
 const totalAmount = computed(() => {
   return form.goods.reduce((sum, item) => sum + item.quantity * item.price, 0)
 })
-
-const disabledDate = (time: Date) => {
-  return time.getTime() < Date.now() - 8.64e7
-}
 
 const handleAddGoods = () => {
   form.goods.push({ name: '', spec: '', unit: '个', quantity: 1, price: 0 })

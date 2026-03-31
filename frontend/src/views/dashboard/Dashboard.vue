@@ -113,17 +113,11 @@
               </div>
               <span>采购订单</span>
             </div>
-            <div class="action-item" @click="router.push('/approval')">
+            <div class="action-item" @click="router.push('/suppliers')">
               <div class="action-icon">
-                <el-icon :size="28"><Check /></el-icon>
+                <el-icon :size="28"><OfficeBuilding /></el-icon>
               </div>
-              <span>审批管理</span>
-            </div>
-            <div class="action-item">
-              <div class="action-icon">
-                <el-icon :size="28"><Setting /></el-icon>
-              </div>
-              <span>系统设置</span>
+              <span>供应商</span>
             </div>
           </div>
         </el-card>

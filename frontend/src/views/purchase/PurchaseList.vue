@@ -17,14 +17,22 @@
             <el-option label="已取消" value="cancelled" />
           </el-select>
         </el-form-item>
-        <el-form-item label="日期范围">
+        <el-form-item label="开始日期">
           <el-date-picker
-            v-model="searchForm.dateRange"
-            type="daterange"
-            range-separator="至"
-            start-placeholder="开始日期"
-            end-placeholder="结束日期"
-            style="width: 240px"
+            v-model="searchForm.startDate"
+            type="date"
+            placeholder="选择开始日期"
+            style="width: 150px"
+            value-format="YYYY-MM-DD"
+          />
+        </el-form-item>
+        <el-form-item label="结束日期">
+          <el-date-picker
+            v-model="searchForm.endDate"
+            type="date"
+            placeholder="选择结束日期"
+            style="width: 150px"
+            value-format="YYYY-MM-DD"
           />
         </el-form-item>
         <el-form-item>
@@ -100,7 +108,8 @@ const searchForm = reactive({
   orderNo: '',
   title: '',
   status: '',
-  dateRange: []
+  startDate: '',
+  endDate: ''
 })
 
 const pagination = reactive({
@@ -143,7 +152,8 @@ const handleReset = () => {
   searchForm.orderNo = ''
   searchForm.title = ''
   searchForm.status = ''
-  searchForm.dateRange = []
+  searchForm.startDate = ''
+  searchForm.endDate = ''
   handleSearch()
 }
 
