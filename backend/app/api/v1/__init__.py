@@ -10,7 +10,8 @@ from app.api.v1 import (
     purchases,
     approvals,
     erp,
-    tenants
+    tenants,
+    suppliers
 )
 
 api_router = APIRouter()
@@ -19,6 +20,7 @@ api_router = APIRouter()
 api_router.include_router(auth.router, prefix="/auth", tags=["认证"])
 api_router.include_router(users.router, prefix="/users", tags=["用户"])
 api_router.include_router(goods.router, prefix="/goods", tags=["商品"])
+api_router.include_router(suppliers.router, prefix="/suppliers", tags=["供应商"])
 api_router.include_router(prices.router, prefix="/prices", tags=["价格"])
 api_router.include_router(purchases.router, prefix="/purchases", tags=["采购"])
 api_router.include_router(approvals.router, prefix="/approvals", tags=["审批"])

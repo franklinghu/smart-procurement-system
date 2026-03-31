@@ -43,3 +43,4 @@ class Tenant(Base):
     # 关系
     users = relationship("User", back_populates="tenant")
     purchase_orders = relationship("PurchaseOrder", back_populates="tenant")
+    suppliers = relationship("Supplier", back_populates="tenant")

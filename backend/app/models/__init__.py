@@ -4,6 +4,7 @@
 from app.models.tenant import Tenant
 from app.models.user import User, UserRole, UserStatus
 from app.models.purchase_order import PurchaseOrder, OrderStatus, PaymentMethod
+from app.models.supplier import Supplier, SupplierPlatform
 
 __all__ = [
     "Tenant",
@@ -12,5 +13,7 @@ __all__ = [
     "UserStatus",
     "PurchaseOrder",
     "OrderStatus",
-    "PaymentMethod"
+    "PaymentMethod",
+    "Supplier",
+    "SupplierPlatform"
 ]
