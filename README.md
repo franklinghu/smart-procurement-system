@@ -62,4 +62,8 @@ procurement-system/
 
 ---
 
+---
+
 **版本**：v0.1.0 | **状态**：开发中
+
+**GitHub**：https://github.com/franklinghu/smart-procurement-system
