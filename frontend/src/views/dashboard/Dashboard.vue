@@ -119,6 +119,12 @@
               </div>
               <span>供应商</span>
             </div>
+            <div class="action-item" @click="router.push('/notifications')">
+              <div class="action-icon message">
+                <el-icon :size="28"><Bell /></el-icon>
+              </div>
+              <span>消息中心</span>
+            </div>
           </div>
         </el-card>
       </el-col>

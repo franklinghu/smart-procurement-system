@@ -72,6 +72,12 @@ const protectedRoutes: RouteRecordRaw[] = [
     meta: { title: '审批详情' }
   },
   {
+    path: '/notifications',
+    name: 'Notifications',
+    component: () => import('@/views/notifications/Notifications.vue'),
+    meta: { title: '消息中心' }
+  },
+  {
     path: '/settings',
     name: 'Settings',
     component: () => import('@/views/settings/Settings.vue'),
